@@ -1,0 +1,27 @@
+import java.util.Scanner; //Siempre incorporar esta función. por ahora....
+
+/*Realizar un programa que dada una cadena de caracteres por caracteres, genere otra cadena
+resultado de invertir la primera.*/
+
+public class ej6 {
+    public static void main(String[] args) {
+        Scanner entrada = new Scanner(System.in); // crea un objeto scanner. Variable de tipo escaner es objeto
+        String cadena, cadenaInvertida = " "; // Tenemos que asignar un valor a cadenaInvertida. Cadena ya le asignamos el valor de scanner.
+
+        int i;
+        char caracter;
+
+        System.out.print("Introduce una frase ");
+        cadena = entrada.nextLine(); // Entrada para llamar al objeto scanner. Asi leemos el teclado y lo metemos en cadena.
+                                     
+        // En el for el primer valor es la posicion inicial, el segundo es la condicion
+        // de parada y el tercero el avance del contador, es este caso decreciendo -1,
+        // con i-- el i-- es igual a i = i -1
+        for (i = cadena.length() - 1; i >= 0; i--) {
+            cadenaInvertida += cadena.charAt(i);         //+= es igual que concatenar.
+            //cadenaInvertida.concat(Character.toString(caracter));
+        }
+        System.out.println("La cadena invertida es:" + cadenaInvertida);
+
+    }
+}
