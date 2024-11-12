@@ -1,0 +1,24 @@
+/*Introducir una cadena de caracteres e indicar si es un palíndromo. Una palabra palíndroma es aquella
+que se lee igual adelante que atrás.*/
+
+import java.util.Scanner;
+
+public class ej10 {
+    public static void main(String[] args) {
+          String cad, cadinvertida = "";
+        Scanner entrada = new Scanner(System.in);
+
+        System.out.print("Introduzca una palabra: ");
+        cad = entrada.nextLine();
+
+        for (int i = cad.length() - 1; i >= 0; i--) {
+            cadinvertida += cad.charAt(i);
+        }
+
+        if (cadinvertida.equals(cad)) {
+            System.out.println("Es una palabra palíndroma");
+        } else {
+            System.out.println("No es una palabra palíndroma");
+        }
+    }
+}
