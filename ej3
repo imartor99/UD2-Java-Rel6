@@ -1,0 +1,30 @@
+/*Pide una cadena y un carácter por teclado (valida que sea un carácter) y muestra cuántas veces
+aparece el carácter en la cadena.*/
+
+import java.util.Scanner;
+
+public class ej3 {
+    public static void main(String[] args) {
+        char caracter;
+        String cad;
+        int cont = 0;
+        Scanner entrada = new Scanner(System.in);
+
+        System.out.print("Introduce una cadena: ");
+        cad = entrada.nextLine();
+
+        System.out.print("Introduce un carácter: ");
+        caracter = entrada.next().charAt(cont);
+
+        int longitud = cad.length();
+
+        for (int i = 0; i < longitud; i++) {
+            if (cad.charAt(i) == caracter) {
+                cont++;
+            }
+
+        }
+        System.out.println("El carácter " + caracter + " aparece " + cont + " veces en total");
+
+    }
+}
