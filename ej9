@@ -1,0 +1,25 @@
+/*Realizar un programa que compruebe si una cadena contiene una subcadena. Las dos cadenas se
+introducen por teclado.*/
+
+import java.util.Scanner;
+
+public class ej9 {
+    public static void main(String[] args) {
+        
+        String cad, subcad;
+        Scanner entrada = new Scanner(System.in);
+
+        System.out.print("Introduce una cadena: ");
+        cad = entrada.nextLine();
+
+        System.out.print("Introduce una subcadena: ");
+        subcad = entrada.nextLine();
+
+        if (cad.contains(subcad)) {
+            System.out.println("La subcadena está en la cadena");
+        } else {
+            System.out.println("La subcadena no está en la cadena");
+        }
+
+    }
+}
