@@ -1,0 +1,27 @@
+/*Realizar un programa que lea una cadena por teclado y convierta las mayúsculas a minúsculas y
+viceversa.*/
+
+import java.util.Scanner;
+
+public class ej8 {
+   public static void main(String[] args) {
+        String cad, letra, nuevacad = " ";
+        Scanner entrada = new Scanner(System.in);
+
+        System.out.println("Introduce una cadena: ");
+        cad = entrada.nextLine();
+
+        for (int i = 0; i < cad.length(); i++) {
+            letra = cad.substring(i, i + 1);
+            if (letra.equals(letra.toUpperCase())) {
+                nuevacad = nuevacad + letra.toLowerCase();
+            }
+            if (letra.equals(letra.toLowerCase())) {
+                nuevacad = nuevacad + letra.toUpperCase();
+            }
+
+        }
+        System.out.println(nuevacad);
+        entrada.close();
+   } 
+}
